@@ -9,6 +9,7 @@ class Paddle(Turtle):
         self.color("white")
         self.speed(10)
         self.goto(position)
+        self.player = "left" if position[0] < 0 else "right"
 
         self.moving_up = False
         self.moving_down = False
