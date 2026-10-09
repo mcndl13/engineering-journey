@@ -17,6 +17,10 @@ class Food (Turtle):
 
 
     def refresh(self):
+        self.showturtle()
         self.x_cord = random.randint(-250, 250)
         self.y_cord = random.randint(-250, 280)
         self.goto(self.x_cord, self.y_cord)
+
+    def hide(self):
+        self.hideturtle()

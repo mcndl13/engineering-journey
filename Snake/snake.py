@@ -60,3 +60,15 @@ class Snake():
             new_y = self.snake_segments[seg-1].ycor()
             self.snake_segments[seg].goto(new_x, new_y)
         self.head.forward(MOVE_DISTANCE)
+
+    def reset(self):
+        for segment in self.snake_segments:
+            segment.hideturtle()
+            segment.clear()
+        self.snake_segments = []
+        self.create_snake()
+        self.head = self.snake_segments[0]
+
+    def hide(self):
+        for segment in self.snake_segments:
+            segment.hideturtle()

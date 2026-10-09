@@ -23,3 +23,11 @@ class ScoreBoard(Turtle):
         self.clear()
         self.update_score()
 
+    def reset(self):
+        self.score = 0
+        self.clear()
+        self.goto(0, 265)
+        self.update_score()
+
+    def hide(self):
+        self.clear()
